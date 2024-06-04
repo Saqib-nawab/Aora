@@ -45,5 +45,3 @@ const RootlLayout = () => {
 }
 
 export default RootlLayout
-
-const styles = StyleSheet.create({})
