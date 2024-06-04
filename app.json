@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "Aora",
+    "scheme": "Aora",
     "slug": "Aora",
     "version": "1.0.0",
     "orientation": "portrait",
