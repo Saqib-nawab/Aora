@@ -4,6 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { View, Text, ScrollView, Dimensions, Alert, Image } from "react-native";
 
 import { images } from "../../constants";
+import { createUser } from "../../lib/appwrite";
 import CustomButton from "../../components/CustomButton";
 import FormField from "../../components/FormField";
 
@@ -15,6 +16,7 @@ const SignUp = () => {
   });
 
   const submit = async () => {
+    createUser();
   };
 
   return (
