@@ -16,11 +16,11 @@ const Profile = () => {
     const { data: posts } = useAppwrite(() => getUserPosts(user.$id));
 
     const logout = async () => {
-        // await signOut();
-        // setUser(null);
-        // setIsLogged(false);
+        await signOut();
+        setUser(null);
+        setIsLogged(false);
 
-        // router.replace("/sign-in");
+        router.replace("/sign-in");
     };
 
     return (
