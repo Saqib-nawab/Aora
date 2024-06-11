@@ -5,6 +5,7 @@ import { FlatList, Image, RefreshControl, Text, View } from "react-native";
 import { images } from "../../constants";
 import useAppwrite from "../../lib/useAppwrite";
 import { getAllPosts, getLatestPosts } from "../../lib/appwrite";
+import { useGlobalContext } from "../../context/GlobalProvider";
 // import { EmptyState, SearchInput, Trending, VideoCard } from "../../components";
 import EmptyState from "../../components/EmptyState";
 import SearchInput from "../../components/SearchInput";
@@ -12,6 +13,7 @@ import Trending from "../../components/Trending";
 import VideoCard from "../../components/VideoCard";
 
 const Home = () => {
+  const { user, setUser, setIsLogged } = useGlobalContext();
   const { data: posts, refetch } = useAppwrite(getAllPosts);
   const { data: latestPosts } = useAppwrite(getLatestPosts);
 
@@ -51,7 +53,7 @@ const Home = () => {
                   Welcome Back
                 </Text>
                 <Text className="text-2xl font-psemibold text-white">
-                  JSMastery
+                  {user?.username}
                 </Text>
               </View>
 
